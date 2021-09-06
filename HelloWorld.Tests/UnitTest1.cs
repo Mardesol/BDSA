@@ -7,11 +7,11 @@ namespace HelloWorld.Tests
     public class ProgramTests
     {
         [Fact]
-        public void Main_prints_Hello_World()
+        public void BoilerPlate()
         {
             // Arrange
-            var writer = new StringWriter();
-            Console.SetOut(writer);
+            //var writer = new StringWriter();
+            //Console.SetOut(writer);
 
             // Act
             // Program.(Metoden man vil teste)
@@ -19,11 +19,22 @@ namespace HelloWorld.Tests
 
             // Assert
             // Assert.Equal("expectedOutput!", actualOutput);
-            Assert.Equal("Hello World!", output);
+            //Assert.Equal("Hello World!", output);
         }
 
         [Fact]
-        public void 
+        public void Year_1600_Is_Leap_Year()
+        {
+            bool isLeapYear = Program.IsLeapYear(1600);
+            Assert.True(isLeapYear);
+        }
+
+        [Fact]
+        public void Year_1700_Is_Not_Leap_Year()
+        {
+            bool isLeapYear = Program.IsLeapYear(1700);
+            Assert.False(isLeapYear);
+        }
 
         [Fact]
         public void Main_prints_Hello_World()
@@ -33,7 +44,7 @@ namespace HelloWorld.Tests
             Console.SetOut(writer);
 
             // Act
-            Program.Main(new string[0]);
+            Program.HelloWorld();
             var output = writer.GetStringBuilder().ToString().Trim();
 
             // Assert

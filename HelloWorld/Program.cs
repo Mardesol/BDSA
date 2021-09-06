@@ -2,10 +2,16 @@
 
 namespace HelloWorld
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            // Navnet på metoden der skal køres
+            HelloWorld();
+        }
+
+
+        public static void HelloWorld(){
             Console.WriteLine("Hello World!");
         }
     }

@@ -1,14 +1,39 @@
 using System;
+using System.IO;
 using Xunit;
 
 namespace HelloWorld.Tests
 {
-    public class UnitTest1
+    public class ProgramTests
     {
         [Fact]
-        public void Test1()
+        public void Main_prints_Hello_World()
         {
+            // Arrange
+            var writer = new StringWriter();
+            Console.SetOut(writer);
 
+            // Act
+            // Program.(Metoden man vil teste)
+            
+
+            // Assert
+            Assert.Equal("Hello World!", output);
+        }
+
+        [Fact]
+        public void Main_prints_Hello_World()
+        {
+            // Arrange
+            var writer = new StringWriter();
+            Console.SetOut(writer);
+
+            // Act
+            Program.Main(new string[0]);
+            var output = writer.GetStringBuilder().ToString().Trim();
+
+            // Assert
+            Assert.Equal("Hello World!", output);
         }
     }
 }
